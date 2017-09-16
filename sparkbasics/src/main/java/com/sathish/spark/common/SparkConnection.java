@@ -7,7 +7,7 @@ import org.apache.spark.sql.SparkSession ;
 public class SparkConnection {
 
 	//A name for the spark instance. Can be any string
-	private static String appName = "V2 Maestros";
+	private static String appName = "sathish";
 	//Pointer / URL to the Spark instance - embedded
 	private static String sparkMaster = "local[2]";
 	
@@ -25,7 +25,7 @@ public class SparkConnection {
 			
 			//Make sure you download the winutils binaries into this directory
 			//from https://github.com/srccodes/hadoop-common-2.2.0-bin/archive/master.zip
-			//System.setProperty("hadoop.home.dir", "c:\\spark\\winutils\\");	
+			System.setProperty("hadoop.home.dir", "c:\\spark\\winutils\\");	
 			
 			//Create Spark Context from configuration
 			spContext = new JavaSparkContext(conf);
